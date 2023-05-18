@@ -1,6 +1,6 @@
 ---
 - name: Find QRadar rule state
-  hosts: 192.168.6.135
+  hosts: qradar
   collections:
     - ibm.qradar
 
