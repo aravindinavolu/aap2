@@ -1,6 +1,6 @@
 ---
 - name: Find QRadar rule state
-  hosts: qradar
+  hosts: all
   collections:
     - ibm.qradar
 
