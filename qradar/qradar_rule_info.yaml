@@ -6,5 +6,5 @@
 
   tasks:
     - name: get info about qradar rule
-      qradar_rule_info:
+      ibm.qradar.rule_info:
         name: "Potential DDoS Against Single Host (TCP)"
