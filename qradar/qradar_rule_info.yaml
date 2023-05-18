@@ -8,11 +8,11 @@
     - name: get info about qradar rule
       ibm.qradar.rule_info:
         name: "Potential DDoS Against Single Host (TCP)"
+        
     - name: Get list of all currently OPEN IBM QRadar Offenses
       ibm.qradar.offense_info:
         status: OPEN
       register: offense_list
 
-    - name: display offense information for debug purposes
-      debug: offense_list
+    - debug: msg="{{ offense_list.stdout }}"
 
