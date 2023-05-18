@@ -14,6 +14,5 @@
       register: offense_list
 
     - name: display offense information for debug purposes
-      debug:
-      var: offense_list
+      debug: offense_list
 
