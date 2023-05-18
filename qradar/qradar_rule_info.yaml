@@ -14,5 +14,5 @@
         status: OPEN
       register: offense_list
 
-    - debug: msg="{{ offense_list.stdout }}"
+    - debug: msg="{{ offense_list }}"
 
