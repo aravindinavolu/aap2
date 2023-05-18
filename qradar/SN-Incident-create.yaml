@@ -1,0 +1,20 @@
+---
+- name: Create servicenow ticket
+  hosts: all
+  collections:
+    - ibm.qradar
+  tasks:
+    - name: Create a problem
+      servicenow.itsm.problem:
+        short_description: my-problem
+        state: new
+      register: problem
+
+    - name: Create a problem task
+      servicenow.itsm.problem_task:
+    	  state: new
+    	  type: general
+    	  source_problem: "{{ problem.record.number }}"
+    	  short_description: my-problem-task
+    	  priority: low
+      register: problem_task
